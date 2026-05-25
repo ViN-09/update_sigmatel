@@ -854,7 +854,7 @@ ${n.petugasME??"-"}/${n.petugasME2??"-"}
 
 Proses: ${t.prosses??"-"}
 
-Gedung: TTC Teling
+Gedung: TTC Paniki
 Hari/Tanggal: ${fd(t.date)}
 
 Running Time(WITA)
