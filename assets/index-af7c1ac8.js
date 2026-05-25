@@ -597,7 +597,7 @@ Suhu: ${t.suhu??"-"} °C
 Hours Matter 1 : ${t.hours_mater1??"-"}
 Hours Matter 2 : ${t.hours_mater2??"-"}
 `})}const fd=e=>{if(!e)return"-";const t=new Date(e),n=["Minggu","Senin","Selasa","Rabu","Kamis","Jumat","Sabtu"],a=["Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","November","Desember"];return`${n[t.getDay()]}, ${t.getDate()} ${a[t.getMonth()]} ${t.getFullYear()}`},SA=(e,t)=>{if(!e||!t)return"-";const n=p=>{if(typeof p!="string")return null;const g=p.match(/([01]?\d|2[0-3]):([0-5]\d)/);return g?`${g[1].padStart(2,"0")}:${g[2].padStart(2,"0")}`:null},a=n(e),i=n(t);if(!a||!i)return"-";const[r,s]=a.split(":").map(Number),[o,l]=i.split(":").map(Number);let c=new Date(1970,0,1,o,l)-new Date(1970,0,1,r,s);c<0&&Math.abs(c)<12*60*60*1e3?c=Math.abs(c):c<0&&(c+=24*60*60*1e3);const u=Math.floor(c/6e4),h=Math.floor(u/60),d=u%60;return h>0&&d>0?`${h} Jam ${d} Menit`:h>0?`${h} Jam`:`${d} Menit`},hd=e=>{if(!e)return"-";typeof e!="string"&&(e=String(e));const t=e.match(/([01]?\d|2[0-3]):([0-5]\d)/);if(!t)return"-";const n=t[1].padStart(2,"0"),a=t[2].padStart(2,"0");return`${n}:${a}`},ly=(e,t)=>e&&t?(e/t*100).toFixed(2):"-",bf=(e,t)=>e&&t?(e/t*100).toFixed(2):"-",yf=(...e)=>e.reduce((t,n)=>t+(Number(n)||0),0).toFixed(2),nF=e=>(e/21e3*100).toFixed(2),aF=e=>(e/35).toFixed(2);function iF({data:e}){const t=(e==null?void 0:e.report_lvmdp1)||{},n=(e==null?void 0:e.report_lvmdp2)||{},a=(e==null?void 0:e.load_trafo)||{},i=(e==null?void 0:e.report_info)||{},r=(e==null?void 0:e.report_kwh)||{},s=(e==null?void 0:e.report_suhu)||{},o=(e==null?void 0:e.trafof_c)||{},l=(e==null?void 0:e.rec1)||{},c=(e==null?void 0:e.rec2)||{},u=(e==null?void 0:e.rec3)||{},h=(e==null?void 0:e.rec4)||{},d=(e==null?void 0:e.ups1)||{},p=(e==null?void 0:e.ups2)||{},g=(e==null?void 0:e.dcpdu_1)||{},m=(e==null?void 0:e.dcpdu_2)||{},x=(e==null?void 0:e.dcpdu_3)||{},b=(e==null?void 0:e.pac1)||{},y=(e==null?void 0:e.pac2)||{},v=(e==null?void 0:e.pac3)||{},w=(e==null?void 0:e.pac4)||{};e!=null&&e.pac5;const S=(e==null?void 0:e.pac6)||{},E=(e==null?void 0:e.pac7)||{},_=(e==null?void 0:e.pac8)||{},C=(e==null?void 0:e.pac9)||{},k=(e==null?void 0:e.pac10)||{},M=(e==null?void 0:e.pac11)||{},U=(e==null?void 0:e.pac12)||{};e!=null&&e.pac13,e!=null&&e.pac14,e!=null&&e.pac15;const B=(e==null?void 0:e.genset.genset1)||{},q=(e==null?void 0:e.genset.genset2)||{},se=i.date_time?new Date(i.date_time):new Date,V=se.toLocaleDateString("id-ID",{weekday:"long",day:"2-digit",month:"long",year:"numeric"}),G=se.toLocaleTimeString("id-ID",{hour:"2-digit",minute:"2-digit"});return yf(B.liter_bulanan,B.liter_harian,q.liter_harian),f.jsx("pre",{children:`
-            *Site : TTC TELING*
+            *Site : TTC Paniki*
 ME Standby
 ${Array.from({length:4},(te,F)=>{const ie=i[`petugasME${F===0?"":F+1}`],pe=i[`petugasME${F===0?"":F+1}Phone`];return ie?` - ${ie}${pe?" / "+pe:""}`:null}).filter(Boolean).join(`
 `)||"-"}
@@ -877,7 +877,7 @@ ${n.petugasME??"-"}/${n.petugasME2??"-"}
 
 Proses: ${t.prosses??"-"}
 
-Gedung: TTC Teling
+Gedung: TTC Paniki
 Hari/Tanggal: ${fd(t.date)}
 
 Running Time(WITA)
